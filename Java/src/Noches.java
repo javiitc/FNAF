@@ -1,8 +1,11 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Noches {
 
-    public static void noche1() {
+    int cordura = 150;
+
+    public static void noche1(int cordura) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("========================");
@@ -16,7 +19,6 @@ public class Noches {
         int [] posibilidadMuerteEscondido = {0, 0, 0, 1};
         int [] noHacerNada = {1, 1, 1, 0};
         int energia = 150;
-        int cordura = 150;
         boolean conVida = true;
 
         while (conVida) {
@@ -54,5 +56,26 @@ public class Noches {
         System.out.println("========================");
         System.out.println("        NOCHE 5         ");
         System.out.println("========================");
+    }
+
+    public static String eventoBonnie() {
+        Random random = new Random();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("");
+        int opcion = sc.nextInt();
+
+        switch (opcion) {
+            case 1:
+
+                break;
+            case 2:
+
+                break;
+            case 3:
+
+                break;
+        }
+        return "";
     }
 }
