@@ -25,9 +25,12 @@ public class Noches {
 
         while (conVida) {
             for (int i = 0; i < movesLeft; i++) {
-                cordura -= 5;
-                energia -= 10;
 
+                conVida = animatronics.isAlive;
+
+                if (!conVida) {
+                    break;
+                }
                 System.out.println("========================");
                 System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
                 System.out.println("========================");
@@ -35,7 +38,9 @@ public class Noches {
                 animatronics.bonnieEvent();
                 movesLeft--;
 
-                conVida = animatronics.isAlive;
+                cordura -= 5;
+                energia -= 10;
+
             }
         }
         return conVida;
