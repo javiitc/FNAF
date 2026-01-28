@@ -136,8 +136,8 @@ public class Animatronics {
         switch (choice) {
             case 1:
                 System.out.println("You pass the hour watching TV.");
-                energy -= 20;
-                sanity += 10;
+                energy -= 10;
+                sanity += 15;
                 break;
             case 2:
                 System.out.println("You decide to focus on your work instead.");

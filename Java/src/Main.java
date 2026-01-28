@@ -9,7 +9,6 @@ public class Main {
 
         int contador = 1;
         boolean juego = true;
-        boolean nochesJuego = true;
 
         System.out.println("Introduce tu nombre:");
         String nombre = sc.next();
@@ -17,8 +16,9 @@ public class Main {
                 "Buena suerte!");
 
         while (juego) {
-            nochesJuego = true;
-            while (nochesJuego) {
+
+            boolean nochesJuego = false;
+
                 if (contador == 1) {
                     nochesJuego = noches.noche1();
                     contador++;
@@ -32,8 +32,13 @@ public class Main {
                 } else {
 
                 }
-            }
 
+                if (!nochesJuego) {
+                    System.out.println("==============================");
+                    System.out.println("          GAME OVER            ");
+                    System.out.println("==============================");
+                    juego = false;
+                }
         }
     }
 }

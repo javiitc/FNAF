@@ -85,8 +85,6 @@ public class Noches {
                         eventRoll = chanceTV[random.nextInt(9)];
                         if (eventRoll == 1) {
                             animatronics.tvEvent();
-                        } else {
-                            System.out.println("No ha pasado nada...");
                         }
                     }
 
