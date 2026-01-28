@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
         Noches noches = new Noches();
@@ -17,7 +17,7 @@ public class Main {
 
         while (juego) {
             if (contador == 1) {
-                noches.noche1();
+                juego = noches.noche1();
                 contador++;
             } else if (contador == 2) {
 
