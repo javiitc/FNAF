@@ -18,8 +18,6 @@ public class Noches {
                 "Mmm... sobre los animatrónicos que hay, al parecer se ponen un poco activos durante la noche. Puede sonar peligroso, pero realmente no hay nada de lo que preocuparse! \n" +
                 "Tu primer día será sencillo, solo cierra las puertas cuando sea necesario para no malgastar energía.");
 
-        int[] posibilidadMuerteEscondido = {0, 0, 0, 1};
-        int[] noHacerNada = {1, 1, 1, 0};
         boolean conVida = true;
         int movesLeft = 3;
 
@@ -31,6 +29,7 @@ public class Noches {
                 if (!conVida) {
                     break;
                 }
+
                 System.out.println("========================");
                 System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
                 System.out.println("========================");
@@ -46,35 +45,82 @@ public class Noches {
         return conVida;
     }
 
-    public static void noche2() {
+    public boolean noche2() {
+        Scanner sc = new Scanner(System.in);
+        Animatronics animatronics = new Animatronics();
+        Random random = new Random();
+
         System.out.println("========================");
         System.out.println("        NOCHE 2         ");
         System.out.println("========================");
         System.out.println("Hola? Felicidades por haber completado el primer día! No voy a hablar tanto esta vez, ya que Freddy y compañía tienden a ser más activos a medida que avanza la semana. \n" +
                 "Si en algún momento te sientes... en peligro, enciende la TV cuando tengas oportunidad, te será de ayuda.");
 
+        boolean conVida = true;
+        int movesLeft = 4;
+        int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
+        int eventRoll;
+
+            while (conVida) {
+                int evento = random.nextInt(3);
+                for (int i = 0; i < movesLeft; i++) {
+
+                    conVida = animatronics.isAlive;
+
+                    if (!conVida) {
+                        break;
+                    }
+
+                    System.out.println("========================");
+                    System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
+                    System.out.println("========================");
+
+                    if (evento == 0) {
+                        animatronics.bonnieEvent();
+                        movesLeft--;
+                    } else if (evento == 1) {
+                        animatronics.chicaEvent();
+                        movesLeft--;
+                    } else {
+                        eventRoll = chanceTV[random.nextInt(9)];
+                        if (eventRoll == 1) {
+                            animatronics.tvEvent();
+                        } else {
+                            System.out.println("No ha pasado nada...");
+                        }
+                    }
+
+                    cordura -= 5;
+                    energia -= 10;
+
+                }
+            }
+        return conVida;
     }
 
-    public static void noche3() {
+    public boolean noche3() {
         System.out.println("========================");
         System.out.println("        NOCHE 3         ");
         System.out.println("========================");
         System.out.println("Hola, hola? Lo estás haciendo genial! Mucha gente no ha durado tanto! Es decir, no estoy diciendo que hayan muerto. \n" +
                 "En fin, mejor no tomaré mucho más de tu tiempo, pues las cosas empiezan a ponerse serias a partir de esta noche");
+        return false;
     }
 
-    public static void noche4() {
+    public boolean noche4() {
         System.out.println("========================");
         System.out.println("        NOCHE 4         ");
         System.out.println("========================");
         System.out.println("Mmm... escucha, puede que no esté aquí mañana para enviarte un mensaje. Ha sido una mala noche aquí para mi. Sabes...");
         System.out.println("Escuchas en el mensaje como golpeaban la puerta, un estruendo, y de repente la llamada se corta.");
+        return false;
     }
 
-    public static void noche5() {
+    public boolean noche5() {
         System.out.println("========================");
         System.out.println("        NOCHE 5         ");
         System.out.println("========================");
+        return false;
     }
 
 }

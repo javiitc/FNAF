@@ -9,6 +9,7 @@ public class Main {
 
         int contador = 1;
         boolean juego = true;
+        boolean nochesJuego = true;
 
         System.out.println("Introduce tu nombre:");
         String nombre = sc.next();
@@ -16,18 +17,23 @@ public class Main {
                 "Buena suerte!");
 
         while (juego) {
-            if (contador == 1) {
-                juego = noches.noche1();
-                contador++;
-            } else if (contador == 2) {
+            nochesJuego = true;
+            while (nochesJuego) {
+                if (contador == 1) {
+                    nochesJuego = noches.noche1();
+                    contador++;
+                } else if (contador == 2) {
+                    nochesJuego = noches.noche2();
+                    contador++;
+                } else if (contador == 3) {
 
-            } else if (contador == 3) {
+                } else if (contador == 4) {
 
-            } else if (contador == 4) {
+                } else {
 
-            } else {
-
+                }
             }
+
         }
     }
 }

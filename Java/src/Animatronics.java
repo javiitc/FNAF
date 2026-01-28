@@ -16,8 +16,6 @@ public class Animatronics {
         int deathRoll;
         int energy = noches.energia;
 
-        while (isAlive) {
-
             System.out.println("You check the cameras and notice Bonnie's getting closer.");
 
             System.out.println("1. Hide");
@@ -60,7 +58,6 @@ public class Animatronics {
                     System.out.println("Invalid option!");
                     break;
             }
-        }
 
         return isAlive;
 
