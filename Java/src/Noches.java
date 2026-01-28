@@ -4,9 +4,11 @@ import java.util.Scanner;
 public class Noches {
 
     int cordura = 150;
+    int energia = 150;
 
-    public static void noche1(int cordura) {
+    public void noche1() {
         Scanner sc = new Scanner(System.in);
+        Animatronics animatronics = new Animatronics();
 
         System.out.println("========================");
         System.out.println("        NOCHE 1         ");
@@ -18,11 +20,24 @@ public class Noches {
 
         int [] posibilidadMuerteEscondido = {0, 0, 0, 1};
         int [] noHacerNada = {1, 1, 1, 0};
-        int energia = 150;
         boolean conVida = true;
+        int movesLeft = 3;
 
         while (conVida) {
+            for (int i = 0; i < movesLeft; i++) {
+                cordura -= 5;
+                energia -= 10;
 
+                System.out.println("========================");
+                System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
+                System.out.println("========================");
+
+                animatronics.bonnieEvent();
+                movesLeft--;
+
+                conVida = animatronics.isAlive;
+
+            }
         }
 
     }

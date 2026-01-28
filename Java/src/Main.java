@@ -5,6 +5,7 @@ public class Main {
     static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
+        Noches noches = new Noches();
 
         int contador = 1;
         boolean juego = true;
@@ -16,7 +17,8 @@ public class Main {
 
         while (juego) {
             if (contador == 1) {
-
+                noches.noche1();
+                contador++;
             } else if (contador == 2) {
 
             } else if (contador == 3) {
