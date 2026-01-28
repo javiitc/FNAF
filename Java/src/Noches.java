@@ -6,7 +6,7 @@ public class Noches {
     int cordura = 150;
     int energia = 150;
 
-    public void noche1() {
+    public boolean noche1() {
         Scanner sc = new Scanner(System.in);
         Animatronics animatronics = new Animatronics();
 
@@ -18,8 +18,8 @@ public class Noches {
                 "Mmm... sobre los animatrónicos que hay, al parecer se ponen un poco activos durante la noche. Puede sonar peligroso, pero realmente no hay nada de lo que preocuparse! \n" +
                 "Tu primer día será sencillo, solo cierra las puertas cuando sea necesario para no malgastar energía.");
 
-        int [] posibilidadMuerteEscondido = {0, 0, 0, 1};
-        int [] noHacerNada = {1, 1, 1, 0};
+        int[] posibilidadMuerteEscondido = {0, 0, 0, 1};
+        int[] noHacerNada = {1, 1, 1, 0};
         boolean conVida = true;
         int movesLeft = 3;
 
@@ -36,10 +36,9 @@ public class Noches {
                 movesLeft--;
 
                 conVida = animatronics.isAlive;
-
             }
         }
-
+        return conVida;
     }
 
     public static void noche2() {
@@ -59,7 +58,7 @@ public class Noches {
                 "En fin, mejor no tomaré mucho más de tu tiempo, pues las cosas empiezan a ponerse serias a partir de esta noche");
     }
 
-    public static void noche4 () {
+    public static void noche4() {
         System.out.println("========================");
         System.out.println("        NOCHE 4         ");
         System.out.println("========================");
@@ -67,30 +66,10 @@ public class Noches {
         System.out.println("Escuchas en el mensaje como golpeaban la puerta, un estruendo, y de repente la llamada se corta.");
     }
 
-    public static void noche5 (){
+    public static void noche5() {
         System.out.println("========================");
         System.out.println("        NOCHE 5         ");
         System.out.println("========================");
     }
 
-    public static String eventoBonnie() {
-        Random random = new Random();
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("");
-        int opcion = sc.nextInt();
-
-        switch (opcion) {
-            case 1:
-
-                break;
-            case 2:
-
-                break;
-            case 3:
-
-                break;
-        }
-        return "";
-    }
 }
