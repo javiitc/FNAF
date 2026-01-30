@@ -111,7 +111,7 @@ public class Animatronics {
 
     }
 
-    public int tvEvent(Noches noches) {
+    public void tvEvent(Noches noches) {
 
         // int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0}; <- poner en noche2()
 
@@ -136,9 +136,6 @@ public class Animatronics {
                 System.out.println("Invalid option!");
                 break;
         }
-
-        return noches.cordura;
-
     }
 
     public boolean foxyEvent(Noches noches) {
@@ -196,7 +193,7 @@ public class Animatronics {
 
     }
 
-    public int freddyEvent(Noches noches) {
+    public void freddyEvent(Noches noches) {
 
         int energy = noches.energia;
         int energySubtract = (int) (energy * 0.15);
@@ -206,9 +203,11 @@ public class Animatronics {
                 "He can't be fooled by his own mask, but he doesn't seem to be harmful.");
 
         System.out.println("You notice your power got immediately drained.");
-        finalEnergy = energy - energySubtract;
+        noches.energia -= energySubtract;
 
-        return finalEnergy;
+        if (noches.energia < 0) {
+            noches.energia = 0;
+        }
 
     }
 

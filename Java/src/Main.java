@@ -21,25 +21,30 @@ public class Main {
 
                 if (contador == 1) {
                     nochesJuego = noches.noche1();
-                    contador++;
                 } else if (contador == 2) {
                     nochesJuego = noches.noche2();
-                    contador++;
                 } else if (contador == 3) {
                     nochesJuego = noches.noche3();
-                    contador++;
                 } else if (contador == 4) {
                     nochesJuego = noches.noche4();
-                    contador++;
-                } else {
+                } else if (contador == 5) {
                     nochesJuego = noches.noche5();
-                    contador++;
+                } else {
+                    System.out.println("==============================================");
+                    System.out.println("      HAS SOBREVIVIDO A LOS ANIMATRÓNICOS!");
+                    System.out.println("==============================================");
+                    juego = false;
                 }
 
-                if (!nochesJuego) {
-                    System.out.println("==============================");
-                    System.out.println("          GAME OVER            ");
-                    System.out.println("==============================");
+                if (nochesJuego) {
+                    System.out.println("=============================");
+                    System.out.println("            6 AM             ");
+                    System.out.println("=============================");
+                    contador++;
+                } else {
+                    System.out.println("================================");
+                    System.out.println("           GAME OVER            ");
+                    System.out.println("================================");
                     juego = false;
                 }
         }
