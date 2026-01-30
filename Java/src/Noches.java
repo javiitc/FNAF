@@ -66,6 +66,7 @@ public class Noches {
                 for (int i = 0; i < movesLeft; i++) {
 
                     conVida = animatronics.bonnieEvent(this);
+                    conVida = animatronics.chicaEvent(this);
 
                     if (!conVida) {
                         break;
@@ -97,28 +98,156 @@ public class Noches {
     }
 
     public boolean noche3() {
+
+        Scanner sc = new Scanner(System.in);
+        Animatronics animatronics = new Animatronics();
+        Random random = new Random();
+
         System.out.println("========================");
         System.out.println("        NOCHE 3         ");
         System.out.println("========================");
         System.out.println("Hola, hola? Lo estás haciendo genial! Mucha gente no ha durado tanto! Es decir, no estoy diciendo que hayan muerto. \n" +
                 "En fin, mejor no tomaré mucho más de tu tiempo, pues las cosas empiezan a ponerse serias a partir de esta noche");
-        return false;
+
+        boolean conVida = true;
+        int movesLeft = 5;
+        int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
+        int eventRoll;
+
+        while (conVida) {
+            int evento = random.nextInt(4);
+            for (int i = 0; i < movesLeft; i++) {
+
+                conVida = animatronics.bonnieEvent(this);
+                conVida = animatronics.chicaEvent(this);
+                conVida = animatronics.foxyEvent(this);
+
+                if (!conVida) {
+                    break;
+                }
+
+                if (evento == 0) {
+                    animatronics.bonnieEvent(this);
+                    movesLeft--;
+                } else if (evento == 1) {
+                    animatronics.chicaEvent(this);
+                    movesLeft--;
+                } else if (evento == 2) {
+                    animatronics.foxyEvent(this);
+                    movesLeft--;
+                } else {
+                    eventRoll = chanceTV[random.nextInt(9)];
+                    if (eventRoll == 1) {
+                        animatronics.tvEvent(this);
+                    }
+                }
+            }
+        }
+        return conVida;
     }
 
     public boolean noche4() {
+
+        Scanner sc = new Scanner(System.in);
+        Animatronics animatronics = new Animatronics();
+        Random random = new Random();
+
         System.out.println("========================");
         System.out.println("        NOCHE 4         ");
         System.out.println("========================");
         System.out.println("Mmm... escucha, puede que no esté aquí mañana para enviarte un mensaje. Ha sido una mala noche aquí para mi. Sabes...");
         System.out.println("Escuchas en el mensaje como golpeaban la puerta, un estruendo, y de repente la llamada se corta.");
-        return false;
+
+        boolean conVida = true;
+        int movesLeft = 5;
+        int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
+        int eventRoll;
+        while (conVida) {
+            int evento = random.nextInt(5);
+            for (int i = 0; i < movesLeft; i++) {
+
+                conVida = animatronics.bonnieEvent(this);
+                conVida = animatronics.chicaEvent(this);
+                conVida = animatronics.foxyEvent(this);
+
+                if (!conVida) {
+                    break;
+                }
+
+                if (evento == 0) {
+                    animatronics.bonnieEvent(this);
+                    movesLeft--;
+                } else if (evento == 1) {
+                    animatronics.chicaEvent(this);
+                    movesLeft--;
+                } else if (evento == 2) {
+                    animatronics.foxyEvent(this);
+                    movesLeft--;
+                } else if (evento == 3) {
+                    animatronics.freddyEvent(this);
+                    movesLeft--;
+                } else {
+                    eventRoll = chanceTV[random.nextInt(9)];
+                    if (eventRoll == 1) {
+                        animatronics.tvEvent(this);
+                    }
+                }
+            }
+        }
+        return conVida;
     }
 
     public boolean noche5() {
+
+        Scanner sc = new Scanner(System.in);
+        Animatronics animatronics = new Animatronics();
+        Random random = new Random();
+
         System.out.println("========================");
         System.out.println("        NOCHE 5         ");
         System.out.println("========================");
-        return false;
+
+        boolean conVida = true;
+        int movesLeft = 5;
+        int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
+        int eventRoll;
+        while (conVida) {
+            int evento = random.nextInt(5);
+            for (int i = 0; i < movesLeft; i++) {
+
+                conVida = animatronics.bonnieEvent(this);
+                conVida = animatronics.chicaEvent(this);
+                conVida = animatronics.foxyEvent(this);
+                conVida = animatronics.goldenFreddyEvent(this);
+
+                if (!conVida) {
+                    break;
+                }
+
+                if (evento == 0) {
+                    animatronics.bonnieEvent(this);
+                    movesLeft--;
+                } else if (evento == 1) {
+                    animatronics.chicaEvent(this);
+                    movesLeft--;
+                } else if (evento == 2) {
+                    animatronics.foxyEvent(this);
+                    movesLeft--;
+                } else if (evento == 3) {
+                    animatronics.freddyEvent(this);
+                    movesLeft--;
+                } else if (evento == 4) {
+                    animatronics.goldenFreddyEvent(this);
+                    movesLeft--;
+                } else {
+                    eventRoll = chanceTV[random.nextInt(9)];
+                    if (eventRoll == 1) {
+                        animatronics.tvEvent(this);
+                    }}
+            }
+
+        }
+        return conVida;
     }
 
 }

@@ -26,11 +26,14 @@ public class Main {
                     nochesJuego = noches.noche2();
                     contador++;
                 } else if (contador == 3) {
-
+                    nochesJuego = noches.noche3();
+                    contador++;
                 } else if (contador == 4) {
-
+                    nochesJuego = noches.noche4();
+                    contador++;
                 } else {
-
+                    nochesJuego = noches.noche5();
+                    contador++;
                 }
 
                 if (!nochesJuego) {
