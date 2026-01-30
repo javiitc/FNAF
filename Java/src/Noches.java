@@ -21,8 +21,7 @@ public class Noches {
         boolean conVida = true;
         int movesLeft = 3;
 
-        while (conVida) {
-            for (int i = 0; i < movesLeft; i++) {
+        while (conVida && movesLeft > 0) {
 
                 conVida = animatronics.bonnieEvent(this);
 
@@ -35,13 +34,16 @@ public class Noches {
                 System.out.println("========================");
 
                 animatronics.bonnieEvent(this);
-                movesLeft--;
 
                 cordura -= 5;
                 energia -= 10;
+                movesLeft--;
 
+                if (energia <= 0) {
+                    System.out.println("Te has quedado sin energía, en la completa oscuridad los animatrónicos han aprovechado para atacarte");
+                    conVida = false;
+                }
             }
-        }
         return conVida;
     }
 
@@ -61,9 +63,9 @@ public class Noches {
         int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
         int eventRoll;
 
-            while (conVida) {
+            while (conVida && movesLeft > 0) {
+
                 int evento = random.nextInt(3);
-                for (int i = 0; i < movesLeft; i++) {
 
                     conVida = animatronics.bonnieEvent(this);
                     conVida = animatronics.chicaEvent(this);
@@ -78,10 +80,8 @@ public class Noches {
 
                     if (evento == 0) {
                         animatronics.bonnieEvent(this);
-                        movesLeft--;
                     } else if (evento == 1) {
                         animatronics.chicaEvent(this);
-                        movesLeft--;
                     } else {
                         eventRoll = chanceTV[random.nextInt(9)];
                         if (eventRoll == 1) {
@@ -91,7 +91,11 @@ public class Noches {
 
                     cordura -= 5;
                     energia -= 10;
+                    movesLeft--;
 
+                if (energia <= 0) {
+                    System.out.println("Te has quedado sin energía, en la completa oscuridad los animatrónicos han aprovechado para atacarte");
+                    conVida = false;
                 }
             }
         return conVida;
@@ -114,9 +118,10 @@ public class Noches {
         int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
         int eventRoll;
 
-        while (conVida) {
+        while (conVida && movesLeft > 0) {
+
             int evento = random.nextInt(4);
-            for (int i = 0; i < movesLeft; i++) {
+
 
                 conVida = animatronics.bonnieEvent(this);
                 conVida = animatronics.chicaEvent(this);
@@ -128,19 +133,24 @@ public class Noches {
 
                 if (evento == 0) {
                     animatronics.bonnieEvent(this);
-                    movesLeft--;
                 } else if (evento == 1) {
                     animatronics.chicaEvent(this);
-                    movesLeft--;
                 } else if (evento == 2) {
                     animatronics.foxyEvent(this);
-                    movesLeft--;
                 } else {
                     eventRoll = chanceTV[random.nextInt(9)];
                     if (eventRoll == 1) {
                         animatronics.tvEvent(this);
                     }
                 }
+
+                cordura -= 5;
+                energia -= 10;
+                movesLeft--;
+
+            if (energia <= 0) {
+                System.out.println("Te has quedado sin energía, en la completa oscuridad los animatrónicos han aprovechado para atacarte");
+                conVida = false;
             }
         }
         return conVida;
@@ -162,9 +172,9 @@ public class Noches {
         int movesLeft = 5;
         int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
         int eventRoll;
-        while (conVida) {
+        while (conVida && movesLeft > 0) {
+
             int evento = random.nextInt(5);
-            for (int i = 0; i < movesLeft; i++) {
 
                 conVida = animatronics.bonnieEvent(this);
                 conVida = animatronics.chicaEvent(this);
@@ -176,22 +186,26 @@ public class Noches {
 
                 if (evento == 0) {
                     animatronics.bonnieEvent(this);
-                    movesLeft--;
                 } else if (evento == 1) {
                     animatronics.chicaEvent(this);
-                    movesLeft--;
                 } else if (evento == 2) {
                     animatronics.foxyEvent(this);
-                    movesLeft--;
                 } else if (evento == 3) {
                     animatronics.freddyEvent(this);
-                    movesLeft--;
                 } else {
                     eventRoll = chanceTV[random.nextInt(9)];
                     if (eventRoll == 1) {
                         animatronics.tvEvent(this);
                     }
                 }
+
+                cordura -= 5;
+                energia -= 10;
+                movesLeft--;
+
+            if (energia <= 0) {
+                System.out.println("Te has quedado sin energía, en la completa oscuridad los animatrónicos han aprovechado para atacarte");
+                conVida = false;
             }
         }
         return conVida;
@@ -211,9 +225,10 @@ public class Noches {
         int movesLeft = 5;
         int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
         int eventRoll;
-        while (conVida) {
+
+        while (conVida && movesLeft > 0) {
+
             int evento = random.nextInt(6);
-            for (int i = 0; i < movesLeft; i++) {
 
                 conVida = animatronics.bonnieEvent(this);
                 conVida = animatronics.chicaEvent(this);
@@ -226,26 +241,29 @@ public class Noches {
 
                 if (evento == 0) {
                     animatronics.bonnieEvent(this);
-                    movesLeft--;
                 } else if (evento == 1) {
                     animatronics.chicaEvent(this);
-                    movesLeft--;
                 } else if (evento == 2) {
                     animatronics.foxyEvent(this);
-                    movesLeft--;
                 } else if (evento == 3) {
                     animatronics.freddyEvent(this);
-                    movesLeft--;
                 } else if (evento == 4) {
                     animatronics.goldenFreddyEvent(this);
-                    movesLeft--;
                 } else {
                     eventRoll = chanceTV[random.nextInt(9)];
                     if (eventRoll == 1) {
                         animatronics.tvEvent(this);
-                    }}
-            }
+                    }
+                }
 
+                cordura -= 5;
+                energia -= 10;
+                movesLeft--;
+                
+                if (energia <= 0) {
+                System.out.println("Te has quedado sin energía, en la completa oscuridad los animatrónicos han aprovechado para atacarte");
+                conVida = false;
+                }
         }
         return conVida;
     }
