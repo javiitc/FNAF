@@ -212,7 +212,7 @@ public class Noches {
         int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
         int eventRoll;
         while (conVida) {
-            int evento = random.nextInt(5);
+            int evento = random.nextInt(6);
             for (int i = 0; i < movesLeft; i++) {
 
                 conVida = animatronics.bonnieEvent(this);
