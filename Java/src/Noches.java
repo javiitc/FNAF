@@ -23,17 +23,15 @@ public class Noches {
 
         while (conVida && movesLeft > 0) {
 
-                conVida = animatronics.bonnieEvent(this);
-
-                if (!conVida) {
-                    break;
-                }
-
                 System.out.println("========================");
                 System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
                 System.out.println("========================");
 
-                animatronics.bonnieEvent(this);
+                conVida = animatronics.bonnieEvent(this);
+
+                if (!conVida) {
+                break;
+                 }
 
                 cordura -= 5;
                 energia -= 10;
@@ -60,34 +58,26 @@ public class Noches {
 
         boolean conVida = true;
         int movesLeft = 4;
-        int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
-        int eventRoll;
 
             while (conVida && movesLeft > 0) {
 
+                System.out.println("========================");
+                System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
+                System.out.println("========================");
+
                 int evento = random.nextInt(3);
 
-                    conVida = animatronics.bonnieEvent(this);
-                    conVida = animatronics.chicaEvent(this);
-
-                    if (!conVida) {
-                        break;
-                    }
-
-                    System.out.println("========================");
-                    System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
-                    System.out.println("========================");
-
                     if (evento == 0) {
-                        animatronics.bonnieEvent(this);
+                        conVida = animatronics.bonnieEvent(this);
                     } else if (evento == 1) {
-                        animatronics.chicaEvent(this);
+                        conVida = animatronics.chicaEvent(this);
                     } else {
-                        eventRoll = chanceTV[random.nextInt(9)];
-                        if (eventRoll == 1) {
-                            animatronics.tvEvent(this);
-                        }
+                        animatronics.tvEvent(this);
                     }
+
+                if (!conVida) {
+                    break;
+                }
 
                     cordura -= 5;
                     energia -= 10;
@@ -115,36 +105,30 @@ public class Noches {
 
         boolean conVida = true;
         int movesLeft = 5;
-        int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
-        int eventRoll;
 
         while (conVida && movesLeft > 0) {
 
+            System.out.println("========================");
+            System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
+            System.out.println("========================");
+
             int evento = random.nextInt(4);
 
-
-                conVida = animatronics.bonnieEvent(this);
-                conVida = animatronics.chicaEvent(this);
-                conVida = animatronics.foxyEvent(this);
-
-                if (!conVida) {
-                    break;
-                }
-
                 if (evento == 0) {
-                    animatronics.bonnieEvent(this);
+                    conVida = animatronics.bonnieEvent(this);
                 } else if (evento == 1) {
-                    animatronics.chicaEvent(this);
+                    conVida = animatronics.chicaEvent(this);
                 } else if (evento == 2) {
-                    animatronics.foxyEvent(this);
+                    conVida = animatronics.foxyEvent(this);
                 } else {
-                    eventRoll = chanceTV[random.nextInt(9)];
-                    if (eventRoll == 1) {
-                        animatronics.tvEvent(this);
-                    }
+                    animatronics.tvEvent(this);
                 }
 
-                cordura -= 5;
+            if (!conVida) {
+                break;
+            }
+
+            cordura -= 5;
                 energia -= 10;
                 movesLeft--;
 
@@ -170,34 +154,30 @@ public class Noches {
 
         boolean conVida = true;
         int movesLeft = 5;
-        int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
-        int eventRoll;
+
         while (conVida && movesLeft > 0) {
+
+            System.out.println("========================");
+            System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
+            System.out.println("========================");
 
             int evento = random.nextInt(5);
 
-                conVida = animatronics.bonnieEvent(this);
-                conVida = animatronics.chicaEvent(this);
-                conVida = animatronics.foxyEvent(this);
-
-                if (!conVida) {
-                    break;
-                }
-
                 if (evento == 0) {
-                    animatronics.bonnieEvent(this);
+                    conVida = animatronics.bonnieEvent(this);
                 } else if (evento == 1) {
-                    animatronics.chicaEvent(this);
+                    conVida = animatronics.chicaEvent(this);
                 } else if (evento == 2) {
-                    animatronics.foxyEvent(this);
+                    conVida = animatronics.foxyEvent(this);
                 } else if (evento == 3) {
                     animatronics.freddyEvent(this);
                 } else {
-                    eventRoll = chanceTV[random.nextInt(9)];
-                    if (eventRoll == 1) {
-                        animatronics.tvEvent(this);
-                    }
+                    animatronics.tvEvent(this);
                 }
+
+            if (!conVida) {
+                break;
+            }
 
                 cordura -= 5;
                 energia -= 10;
@@ -223,43 +203,37 @@ public class Noches {
 
         boolean conVida = true;
         int movesLeft = 5;
-        int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0};
-        int eventRoll;
 
         while (conVida && movesLeft > 0) {
 
+            System.out.println("========================");
+            System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
+            System.out.println("========================");
+
             int evento = random.nextInt(6);
 
-                conVida = animatronics.bonnieEvent(this);
-                conVida = animatronics.chicaEvent(this);
-                conVida = animatronics.foxyEvent(this);
-                conVida = animatronics.goldenFreddyEvent(this);
-
-                if (!conVida) {
-                    break;
-                }
-
                 if (evento == 0) {
-                    animatronics.bonnieEvent(this);
+                    conVida = animatronics.bonnieEvent(this);
                 } else if (evento == 1) {
-                    animatronics.chicaEvent(this);
+                    conVida = animatronics.chicaEvent(this);
                 } else if (evento == 2) {
-                    animatronics.foxyEvent(this);
+                    conVida = animatronics.foxyEvent(this);
                 } else if (evento == 3) {
                     animatronics.freddyEvent(this);
                 } else if (evento == 4) {
-                    animatronics.goldenFreddyEvent(this);
+                    conVida = animatronics.goldenFreddyEvent(this);
                 } else {
-                    eventRoll = chanceTV[random.nextInt(9)];
-                    if (eventRoll == 1) {
-                        animatronics.tvEvent(this);
-                    }
+                    animatronics.tvEvent(this);
                 }
+
+            if (!conVida) {
+                break;
+            }
 
                 cordura -= 5;
                 energia -= 10;
                 movesLeft--;
-                
+
                 if (energia <= 0) {
                 System.out.println("Te has quedado sin energía, en la completa oscuridad los animatrónicos han aprovechado para atacarte");
                 conVida = false;
