@@ -9,9 +9,21 @@ public class Main {
 
         int contador = 1;
         boolean juego = true;
+        String nombre;
 
-        System.out.println("Introduce tu nombre:");
-        String nombre = sc.next();
+        try {
+            System.out.println("Enter your name:");
+            nombre = sc.nextLine();
+
+            if (nombre.trim().isEmpty()) {
+                nombre = "William Afton";
+                System.out.println("No name entered. You'll be called 'William Afton'.");
+            }
+        } catch (Exception e) {
+            nombre = "William Afton";
+            System.out.println("Error reading name. You'll be called 'William Afton'.");
+        }
+
         System.out.println(nombre + " has sido seleccionado para trabajar como guardia nocturno en Freddy Fazbear's Pizzeria." +
                 "Buena suerte!");
 

@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -19,7 +20,13 @@ public class Animatronics {
             System.out.println("3. Do nothing");
             System.out.println("Choose what to do: ");
 
+            try {
             choice = sc.nextInt();
+            } catch (InputMismatchException e) {
+            System.out.println("Invalid input! You panicked and didn't react in time.");
+            sc.nextLine();
+            return false;
+            }
 
             switch (choice) {
                 case 1:
@@ -71,7 +78,13 @@ public class Animatronics {
         System.out.println("3. Do nothing");
         System.out.println("Choose what to do: ");
 
-        choice = sc.nextInt();
+        try {
+            choice = sc.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input! You panicked and didn't react in time.");
+            sc.nextLine();
+            return false;
+        }
 
         switch (choice) {
             case 1:
@@ -113,15 +126,19 @@ public class Animatronics {
 
     public void tvEvent(Noches noches) {
 
-        // int[] chanceTV = {0, 0, 1, 0, 0, 0, 0, 0, 0, 0}; <- poner en noche2()
-
         System.out.println("You manage to find the TV remote. Do you want to watch TV? (Gives +10 sanity!)");
 
         System.out.println("1. Yes");
         System.out.println("2. No");
         System.out.println("Choose what to do: ");
 
-        choice = sc.nextInt();
+        try {
+            choice = sc.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input! You panicked and didn't react in time.");
+            sc.nextLine();
+            return;
+        }
 
         switch (choice) {
             case 1:
@@ -153,7 +170,13 @@ public class Animatronics {
         System.out.println("3. Do nothing");
         System.out.println("Choose what to do: ");
 
-        choice = sc.nextInt();
+        try {
+            choice = sc.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input! You panicked and didn't react in time.");
+            sc.nextLine();
+            return false;
+        }
 
         switch (choice) {
             case 1:
