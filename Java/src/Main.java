@@ -34,6 +34,7 @@ public class Main {
                     System.out.println("      HAS SOBREVIVIDO A LOS ANIMATRÓNICOS!");
                     System.out.println("==============================================");
                     juego = false;
+                    continue;
                 }
 
                 if (nochesJuego) {

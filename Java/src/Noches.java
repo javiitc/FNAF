@@ -11,21 +11,21 @@ public class Noches {
         Animatronics animatronics = new Animatronics();
 
         System.out.println("========================");
-        System.out.println("        NOCHE 1         ");
+        System.out.println("        NIGHT 1         ");
         System.out.println("========================");
-        System.out.println("El telefóno esta sonando! Escuchas a un hombre diciéndote el siguiente mensaje:");
-        System.out.println("\" Hola? Se me escucha? Hola! Bienvenido a Freddy Fazbear's Pizza, un lugar mágico para los niños dónde la fantasía y diversión son lo único importante \" \n" +
-                "Mmm... sobre los animatrónicos que hay, al parecer se ponen un poco activos durante la noche. Puede sonar peligroso, pero realmente no hay nada de lo que preocuparse! \n" +
-                "Tu primer día será sencillo, solo cierra las puertas cuando sea necesario para no malgastar energía.");
+        System.out.println("The phone is ringing! You hear a man telling you the following message:");
+        System.out.println("\" Hello? Can you hear me? Hello! Welcome to Freddy Fazbear's Pizza, a magical place for kids where fantasy and fun are the only things that matter. \" \n" +
+                "Mmm... about the animatronics we have, apparently they get a bit active during the night. It may sound dangerous, but there's really nothing to worry about! \n" +
+                "Your first day will be simple, just close the doors when necessary to avoid wasting power.");
 
         boolean conVida = true;
         int movesLeft = 3;
 
         while (conVida && movesLeft > 0) {
 
-                System.out.println("========================");
-                System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
-                System.out.println("========================");
+            System.out.println("========================");
+            System.out.println("|| Sanity: " + cordura + " | Power: " + energia + " ||");
+            System.out.println("========================");
 
                 conVida = animatronics.bonnieEvent(this);
 
@@ -34,13 +34,13 @@ public class Noches {
                  }
 
                 cordura -= 5;
-                energia -= 10;
                 movesLeft--;
 
                 if (energia <= 0) {
-                    System.out.println("Te has quedado sin energía, en la completa oscuridad los animatrónicos han aprovechado para atacarte");
+                    System.out.println("You've run out of power, in the complete darkness the animatronics have taken advantage to attack you");
                     conVida = false;
                 }
+
             }
         return conVida;
     }
@@ -51,10 +51,11 @@ public class Noches {
         Random random = new Random();
 
         System.out.println("========================");
-        System.out.println("        NOCHE 2         ");
+        System.out.println("        NIGHT 2         ");
         System.out.println("========================");
-        System.out.println("Hola? Felicidades por haber completado el primer día! No voy a hablar tanto esta vez, ya que Freddy y compañía tienden a ser más activos a medida que avanza la semana. \n" +
-                "Si en algún momento te sientes... en peligro, enciende la TV cuando tengas oportunidad, te será de ayuda.");
+        System.out.println("Hello? Congratulations on completing the first day! I won't talk as much this time, since Freddy and company tend to be more active as the week progresses. \n" +
+                "If at any point you feel... in danger, turn on the TV when you get the chance, it will help you.");
+
 
         boolean conVida = true;
         int movesLeft = 4;
@@ -62,7 +63,7 @@ public class Noches {
             while (conVida && movesLeft > 0) {
 
                 System.out.println("========================");
-                System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
+                System.out.println("|| Sanity: " + cordura + " | Power: " + energia + " ||");
                 System.out.println("========================");
 
                 int evento = random.nextInt(3);
@@ -80,11 +81,10 @@ public class Noches {
                 }
 
                     cordura -= 5;
-                    energia -= 10;
                     movesLeft--;
 
                 if (energia <= 0) {
-                    System.out.println("Te has quedado sin energía, en la completa oscuridad los animatrónicos han aprovechado para atacarte");
+                    System.out.println("You've run out of power, in the complete darkness the animatronics have taken advantage to attack you");
                     conVida = false;
                 }
             }
@@ -98,10 +98,11 @@ public class Noches {
         Random random = new Random();
 
         System.out.println("========================");
-        System.out.println("        NOCHE 3         ");
+        System.out.println("        NIGHT 3         ");
         System.out.println("========================");
-        System.out.println("Hola, hola? Lo estás haciendo genial! Mucha gente no ha durado tanto! Es decir, no estoy diciendo que hayan muerto. \n" +
-                "En fin, mejor no tomaré mucho más de tu tiempo, pues las cosas empiezan a ponerse serias a partir de esta noche");
+        System.out.println("Hello, hello? You're doing great! Not many people have lasted this long! I mean, I'm not saying they died. \n" +
+                "Anyway, I'd better not take any more of your time, as things start to get serious from this night on");
+
 
         boolean conVida = true;
         int movesLeft = 5;
@@ -109,7 +110,7 @@ public class Noches {
         while (conVida && movesLeft > 0) {
 
             System.out.println("========================");
-            System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
+            System.out.println("|| Sanity: " + cordura + " | Power: " + energia + " ||");
             System.out.println("========================");
 
             int evento = random.nextInt(4);
@@ -128,12 +129,11 @@ public class Noches {
                 break;
             }
 
-            cordura -= 5;
-                energia -= 10;
+                cordura -= 5;
                 movesLeft--;
 
             if (energia <= 0) {
-                System.out.println("Te has quedado sin energía, en la completa oscuridad los animatrónicos han aprovechado para atacarte");
+                System.out.println("You've run out of power, in the complete darkness the animatronics have taken advantage to attack you");
                 conVida = false;
             }
         }
@@ -147,10 +147,10 @@ public class Noches {
         Random random = new Random();
 
         System.out.println("========================");
-        System.out.println("        NOCHE 4         ");
+        System.out.println("        NIGHT 4         ");
         System.out.println("========================");
-        System.out.println("Mmm... escucha, puede que no esté aquí mañana para enviarte un mensaje. Ha sido una mala noche aquí para mi. Sabes...");
-        System.out.println("Escuchas en el mensaje como golpeaban la puerta, un estruendo, y de repente la llamada se corta.");
+        System.out.println("Mmm... listen, I may not be here tomorrow to send you a message. It's been a bad night here for me. You know...");
+        System.out.println("You hear in the message how they were banging on the door, a crash, and suddenly the call cuts off.");
 
         boolean conVida = true;
         int movesLeft = 5;
@@ -158,7 +158,7 @@ public class Noches {
         while (conVida && movesLeft > 0) {
 
             System.out.println("========================");
-            System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
+            System.out.println("|| Sanity: " + cordura + " | Power: " + energia + " ||");
             System.out.println("========================");
 
             int evento = random.nextInt(5);
@@ -180,11 +180,10 @@ public class Noches {
             }
 
                 cordura -= 5;
-                energia -= 10;
                 movesLeft--;
 
             if (energia <= 0) {
-                System.out.println("Te has quedado sin energía, en la completa oscuridad los animatrónicos han aprovechado para atacarte");
+                System.out.println("You've run out of power, in the complete darkness the animatronics have taken advantage to attack you");
                 conVida = false;
             }
         }
@@ -198,16 +197,16 @@ public class Noches {
         Random random = new Random();
 
         System.out.println("========================");
-        System.out.println("        NOCHE 5         ");
+        System.out.println("        NIGHT 5         ");
         System.out.println("========================");
 
         boolean conVida = true;
-        int movesLeft = 5;
+        int movesLeft = 6;
 
         while (conVida && movesLeft > 0) {
 
             System.out.println("========================");
-            System.out.println("|| Cordura: " + cordura + " | Energia: " + energia + " ||");
+            System.out.println("|| Sanity: " + cordura + " | Power: " + energia + " ||");
             System.out.println("========================");
 
             int evento = random.nextInt(6);
@@ -231,12 +230,11 @@ public class Noches {
             }
 
                 cordura -= 5;
-                energia -= 10;
                 movesLeft--;
 
                 if (energia <= 0) {
-                System.out.println("Te has quedado sin energía, en la completa oscuridad los animatrónicos han aprovechado para atacarte");
-                conVida = false;
+                    System.out.println("You've run out of power, in the complete darkness the animatronics have taken advantage to attack you");
+                    conVida = false;
                 }
         }
         return conVida;
